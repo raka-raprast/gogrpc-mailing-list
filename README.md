@@ -1,24 +1,11 @@
-# Setup
+# Go gRPC Mailing List
 
-This project requires a `gcc` compiler installed and the `protobuf` code generation tools.
+## About
+This is my first golang public repository, feedback are most welcome at raprast.raka@gmail.com. The project intention is for me to learn how to utilize gRPC server and Protocol Buffer.
 
-## Install protobuf compiler
-
-Install the `protoc` tool using the instructions available at [https://grpc.io/docs/protoc-installation/](https://grpc.io/docs/protoc-installation/).
-
-Alternatively you can download a pre-built binary from [https://github.com/protocolbuffers/protobuf/releases](https://github.com/protocolbuffers/protobuf/releases) and placing the extracted binary somewhere in your `$PATH`.
-
-## Install Go protobuf codegen tools
-
-`go install google.golang.org/protobuf/cmd/protoc-gen-go@latest`
-
-`go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest`
-
-## Generate Go code from .proto files
-
-```
-protoc --go_out=. --go_opt=paths=source_relative \
-  --go-grpc_out=. --go-grpc_opt=paths=source_relative \
-  Proto/mail.proto
-```
-
+### How To Run
+- Open 2 MSys2 MINGW64 terminal
+- Navigate both terminal to the project
+- First Terminal run the `go run ./server`
+- Second Terminal run the `go run ./client`
+- This project can also be tested using Postman or Thunder Client at `http://127.0.0.1:8080/email/`
